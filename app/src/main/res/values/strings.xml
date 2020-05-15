@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Novi medewerker van de maand</string>
+    <string name="createImage">Foto maken</string>
+    <string name="chooseImage">Foto kiezen</string>
+    <string name="selectEmployee">Selecteer een medewerker</string>
+    <string name="saveImage">Opslaan</string>
+</resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:launchMode="singleTop"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        tools:context=".GadgetActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/mergingFrame"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" >
+            <ImageView
+                android:id="@+id/inside_imageview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:src="@drawable/frame0" />
+
+            <ImageView
+                android:id="@+id/outside_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/inside_imageview"
+                android:layout_alignTop="@id/inside_imageview"
+                android:layout_alignRight="@id/inside_imageview"
+                android:layout_alignBottom="@id/inside_imageview"
+                android:scaleType="fitXY"
+                />
+
+            <TextView
+                android:id="@+id/employeeText"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_height="50dp"
+                android:background="#000"
+                android:gravity="center"
+                android:text="@string/selectEmployee"
+                android:textColor="#fff" />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+        <LinearLayout
+            android:id="@+id/top_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/button_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="previousGadget"
+                android:text="vorige" />
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/saveImage"
+                android:onClick="mergeImages"
+                />
+
+            <Button
+                android:id="@+id/button_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="nextGadget"
+                android:text="volgende" />
+        </LinearLayout>
+    </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

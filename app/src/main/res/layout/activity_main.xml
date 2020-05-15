@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/homeText"
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:text="@string/selectEmployee" />
+
+            <Spinner
+                android:id="@+id/employeeSpinner"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/chooseImageButton"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:onClick="openGallery"
+                android:text="@string/chooseImage" />
+
+            <Button
+                android:id="@+id/cameraButton"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:onClick="openCamera"
+                android:text="@string/createImage" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <TextView
+            android:id="@+id/previewText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Voorbeeld:"
+            android:textAlignment="center"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imagePreview"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:visibility="invisible"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:onClick="goToNextView"
+            android:text="Ga naar gadgets"
+            android:textAlignment="center"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+</ScrollView>
